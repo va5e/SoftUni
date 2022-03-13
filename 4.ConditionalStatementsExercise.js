@@ -5,6 +5,7 @@ function seconds(input) {
     let secTwo = +input[1];
     let secThree = +input[2];
     let sumSummary = secOne + secTwo + secThree;
+
     if (sumSummary < 10) {
         console.log(`0:0${sumSummary}`);
     } else if (sumSummary < 60) {
@@ -103,6 +104,7 @@ function godzillaVSKingKong(input) {
 
     let totalNeedCash = decor + priceForClothing;
     let diff = Math.abs(movieBudget - totalNeedCash);
+
     if (movieBudget >= totalNeedCash) {
         console.log(`Action!`);
         console.log(`Wingard starts filming with ${diff.toFixed(2)} leva left.`);
@@ -120,14 +122,13 @@ function ivanchoPluveca(input) {
     let timeInSecondsForOneMeter = Number(input[2]);
     let slowTime = Math.floor(distanceInMeters / 15) * (12.5);
     let ivanchoTime = (distanceInMeters * timeInSecondsForOneMeter) + slowTime;
-
     let diff = Math.abs(recordInSeconds - ivanchoTime);
+
     if (ivanchoTime < recordInSeconds) {
         console.log(`Yes, he succeeded! The new world record is ${ivanchoTime.toFixed(2)} seconds.`)
     } else {
         console.log(`No, he failed! He was ${diff.toFixed(2)} seconds slower.`)
     }
-
 }
 
 //Shopping
@@ -141,7 +142,6 @@ function pazaruvane(input) {
     let boughtGpu = priceGpu * numGpu;
     let priceCpu = boughtGpu * 0.35;
     let priceRAM = boughtGpu * 0.1;
-
     let total = boughtGpu + (priceCpu * numCpu) + (priceRAM * numRAM);
 
     if (numGpu > numCpu) {
@@ -164,6 +164,7 @@ function lunchBreak(input) {
     let lunchDuration = restDuration * 0.125;
     let chillDuration = restDuration * 0.25;
     let timeToWatch = restDuration - lunchDuration - chillDuration;
+
     if (timeToWatch >= episodeLength) {
         console.log(`You have enough time to watch ${nameOfSeries} and left with ${Math.ceil(Math.abs(timeToWatch - episodeLength))} minutes free time.`)
     } else {

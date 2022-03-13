@@ -30,7 +30,6 @@ function squareArea(input) {
 //Inches to cm
 
 function inchesToCm(input) {
-
     let inch = input[0];
     let cm = inch * 2.54;
     console.log(cm);
@@ -63,7 +62,6 @@ function projectTime(input) {
 //Pet shop
 
 function petShop(input) {
-
     let dogFood = Number(input[0]) * 2.5;
     let catFood = Number(input[1]) * 4;
     console.log(`${dogFood + catFood} lv.`);
@@ -72,10 +70,10 @@ function petShop(input) {
 //Yard greening
 
 function greening(input) {
-
     let price = Number(input[0]) * 7.61;
     let discount = price * 0.18;
     let finalPrice = price - discount;
+
     console.log(`The final price is: ${finalPrice} lv.`);
     console.log(`The discount is: ${discount} lv.`);
 }

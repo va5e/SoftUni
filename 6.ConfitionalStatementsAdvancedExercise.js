@@ -18,7 +18,6 @@ function cinema(input) {
 //Summer Outfit
 
 function summerOutfit(input) {
-
     let degrees = +input[0];
     let time = input[1];
     let outfit;
@@ -43,7 +42,6 @@ function summerOutfit(input) {
             case 'Evening': outfit = 'Shirt'; shoes = 'Moccasins'; break;
         }
     }
-
     console.log(`It's ${degrees} degrees, get your ${outfit} and ${shoes}.`)
 }
 
@@ -66,7 +64,6 @@ function newHouse(input) {
         case 'Roses': (numFlowers > 80) ?
             finalPrice = (numFlowers * flowers.rose) * 0.9 :
             finalPrice = (numFlowers * flowers.rose);
-
             break;
         case 'Dahlias': (numFlowers > 90) ?
             finalPrice = (numFlowers * flowers.dalia) * 0.85 :
@@ -75,7 +72,6 @@ function newHouse(input) {
         case 'Tulips': (numFlowers > 80) ?
             finalPrice = (numFlowers * flowers.lale) * 0.85 :
             finalPrice = (numFlowers * flowers.lale);
-
             break;
         case 'Narcissus': (numFlowers < 120) ?
             finalPrice = (numFlowers * flowers.narcis) * 1.15 :
@@ -85,9 +81,10 @@ function newHouse(input) {
             finalPrice = (numFlowers * flowers.gladiola) * 1.20 :
             finalPrice = (numFlowers * flowers.gladiola)
             break;
-
     }
+
     let diff = Math.abs(budget - finalPrice);
+
     if (budget >= finalPrice) {
         console.log(`Hey, you have a great garden with ${numFlowers} ${type} and ${diff.toFixed(2)} leva left.`)
     } else {
@@ -103,6 +100,7 @@ function fishers(input) {
     let season = input[1];
     let numFishers = +input[2];
     let price;
+
     switch (season) {
         case 'Spring': price = 3000;
             if (numFishers <= 6) {
@@ -112,7 +110,6 @@ function fishers(input) {
             } else {
                 price *= 0.75;
             }; break;
-
         case 'Summer': price = 4200;
             if (numFishers <= 6) {
                 price *= 0.9
@@ -120,7 +117,6 @@ function fishers(input) {
                 price *= 0.85;
             } else {
                 price *= 0.75;
-
             }
             break;
         case 'Autumn': price = 4200;
@@ -130,7 +126,6 @@ function fishers(input) {
                 price *= 0.85;
             } else {
                 price *= 0.75;
-
             }
             break;
         case 'Winter': price = 2600;
@@ -140,15 +135,16 @@ function fishers(input) {
                 price *= 0.85;
             } else {
                 price *= 0.75;
-
             }
             break;
-
     }
+
     if (numFishers % 2 === 0 && season != 'Autumn') {
         price *= 0.95;
     }
+
     let diff = Math.abs(budget - price);
+
     if (budget >= price) {
         console.log(`Yes! You have ${diff.toFixed(2)} leva left.`)
     } else {
@@ -159,12 +155,12 @@ function fishers(input) {
 //Journey
 
 function vacation(input) {
-
     let budget = +input[0];
     let season = input[1];
     let destination;
     let acomodation;
     let moneyLeft = 0;
+
     if (budget <= 100) {
         destination = 'Bulgaria'
         if (season === 'summer') {
@@ -234,7 +230,6 @@ function numOp(input) {
         if (n2 === 0) {
             console.log(`Cannot divide ${n1} by zero`)
         } else { console.log(`${n1} / ${n2} = ${(n1 / n2).toFixed(2)}`) }
-
     }
 }
 
@@ -259,14 +254,12 @@ function hotelRoom(input) {
                 finalStudio = (priceStudio * countNights) * 0.95;
             } else {
                 finalStudio = priceStudio * countNights;
-
             };
             if (countNights > 14) {
                 finalApartment = (priceApartment * countNights) * 0.90;
             } else {
                 finalApartment = priceApartment * countNights;
             }; break;
-
         case 'June':
         case 'September':
             priceStudio = 75.20;
@@ -283,7 +276,6 @@ function hotelRoom(input) {
             } else {
                 finalApartment = priceApartment * countNights;
             } break;
-
         case 'July':
         case 'August':
             priceApartment = 77;
@@ -295,9 +287,6 @@ function hotelRoom(input) {
                 finalApartment = priceApartment * countNights;
             }; break;
     }
-
-
-
     console.log(`Apartment: ${finalApartment.toFixed(2)} lv.`);
     console.log(`Studio: ${finalStudio.toFixed(2)} lv.`);
 }
@@ -311,6 +300,7 @@ function Exam(input) {
     let hourOfArival = +input[2];
     let minuteOfArival = +input[3];
     let late = true;
+
     if (hourOfExam === 0 && minuteOfExam === 0 && hourOfArival === 0 && minuteOfArival === 0) {
         console.log(`On time`);
     } else {
@@ -321,6 +311,7 @@ function Exam(input) {
 
         let examStartTimeInMinutes = minuteOfExam + hourOfExam * 60;
         let arrivalInMinutes = hourOfArival * 60 + minuteOfArival;
+
         if (examStartTimeInMinutes < arrivalInMinutes) {
             console.log('Late');
         } else if ((examStartTimeInMinutes === arrivalInMinutes || examStartTimeInMinutes - arrivalInMinutes) <= 30) {
@@ -376,7 +367,6 @@ function skiing(input) {
         case 'room for one person':
             price = 18;
             totalPay = price * (daysOfStaying - 1);
-
             break;
         case 'apartment':
             price = 25;

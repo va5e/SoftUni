@@ -3,6 +3,7 @@
 function nadyaObichaVasko(input) {
     let x = Number(input[0]);
     if (x >= 5.5)
+
         console.log('Excellent!');
 }
 
@@ -25,7 +26,6 @@ function biggerNumber(input) {
 function oddOrEven(input) {
     let a = Number(input[0]);
 
-
     if (a % 2 === 0) {
         console.log('even');
     } else {
@@ -38,7 +38,6 @@ function oddOrEven(input) {
 function password(input) {
     let pass = input[0];
 
-
     if (pass === "s3cr3t!P@ssw0rd") {
         console.log('Welcome')
     } else {
@@ -50,7 +49,6 @@ function password(input) {
 
 function biggerThan100(input) {
     let num = +input[0];
-
 
     if (num < 100) {
         console.log('Less than 100')
@@ -65,7 +63,6 @@ function biggerThan100(input) {
 
 function speed(input) {
     let speed = +input[0];
-
 
     if (speed <= 10) {
         console.log('slow')
@@ -83,6 +80,7 @@ function speed(input) {
 function figuresArea(input) {
     let type = input[0];
     let face;
+
     if (type === 'square') {
         let x = input[1];
         face = x * x;
@@ -98,5 +96,6 @@ function figuresArea(input) {
         let h = input[2];
         face = (x * h) / 2;
     }
+
     console.log(face);
 }

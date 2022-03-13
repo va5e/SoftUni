@@ -2,6 +2,7 @@
 
 function dayOfTheWeek(input) {
     let print;
+
     switch (input[0]) {
         case '1': print = ('Monday'); break;
         case '2': print = ('Tuesday'); break;
@@ -19,6 +20,7 @@ function dayOfTheWeek(input) {
 
 function workingDay(input) {
     let print;
+
     switch (input[0]) {
         case ('Monday'):
         case ('Tuesday'):
@@ -36,7 +38,6 @@ function workingDay(input) {
 //Animal type
 
 function animalClass(input) {
-
     let animal = input[0];
 
     if (animal === 'dog') {
@@ -46,8 +47,6 @@ function animalClass(input) {
     } else {
         console.log('unknown')
     }
-
-
 }
 
 //Personal titles
@@ -70,11 +69,11 @@ function Age(input) {
 //Small shop
 
 function smallShop(input) {
-
     let product = input[0];
     let city = input[1];
     let amount = +input[2];
     let answer = 0;
+
     if (city === 'Sofia') {
         switch (product) {
             case 'coffee': answer = amount * 0.50; break;
@@ -84,6 +83,7 @@ function smallShop(input) {
             case 'peanuts': answer = amount * 1.60; break;
         }
     }
+
     if (city === 'Plovdiv') {
         switch (product) {
             case 'coffee': answer = amount * 0.40; break;
@@ -93,6 +93,7 @@ function smallShop(input) {
             case 'peanuts': answer = amount * 1.50; break;
         }
     }
+
     if (city === 'Varna') {
         switch (product) {
             case 'coffee': answer = amount * 0.45; break;
@@ -109,7 +110,6 @@ function smallShop(input) {
 
 function num(input) {
     let num = +input[0];
-
 
     if (num >= -100 && num <= 100 && num !== 0) {
         console.log('Yes')
@@ -134,8 +134,8 @@ function workingTime(input) {
 //Cinema ticket
 
 function cinema(input) {
-
     let day = input[0];
+
     switch (day) {
         case 'Monday':
         case 'Tuesday': console.log(12); break;
@@ -145,17 +145,16 @@ function cinema(input) {
         case 'Saturday':
         case 'Sunday': console.log(16); break;
     }
-
 }
 
 //Fruit or Vegetable
 
 function fruitShop(input) {
-
     let productName = input[0];
     let fruitArr = ['banana', 'kiwi', 'apple', 'cherry', 'lemon', 'grapes']
     let vegArr = ['tomato', 'cucumber', 'pepper', 'carrot'];
     let answer;
+
     for (let i = 0; i < fruitArr.length; i++) {
         if (productName === fruitArr[i]) {
             answer = ('fruit');
@@ -174,7 +173,6 @@ function fruitShop(input) {
 //Ivalid number
 
 function validNumber(input) {
-
     let num = +input[0];
 
     if ((num >= 100 && num <= 200) || num === 0) {
@@ -182,19 +180,15 @@ function validNumber(input) {
     } else {
         console.log('invalid')
     }
-
 }
 
 //    Fruit shop
 
 function fruitShop(input) {
-
     let fruit = input[0];
     let day = input[1];
     let amount = +input[2];
     let answer;
-
-
 
     if (day === 'Monday' || day === 'Tuesday' || day === 'Thursday' || day === 'Wednesday' || day === 'Friday') {
         switch (fruit) {
@@ -231,10 +225,10 @@ function fruitShop(input) {
 //Trade comissions
 
 function shopComissions(input) {
-
     let city = input[0];
     let sell = +input[1];
     let profit;
+
     if (sell >= 0 && sell <= 500) {
         switch (city) {
             case 'Sofia': profit = sell * 0.05; break;

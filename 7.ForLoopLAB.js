@@ -48,6 +48,7 @@ function string(input) {
 
 function vowels(input) {
     let result = 0;
+
     for (let i = 0; i < input[0].length; i++) {
 
         switch (input[0][i]) {
@@ -57,7 +58,6 @@ function vowels(input) {
             case 'o': result += 4; break;
             case 'u': result += 5; break;
         }
-
     }
     console.log(result);
 }
@@ -66,9 +66,9 @@ function vowels(input) {
 
 function sumOfNumbers(input) {
     let result = 0;
+
     for (let i = 0; i < input[0].length; i++) {
         result += Number(input[0][i]);
-
     }
     console.log(`The sum of the digits is:${result}`);
 }
@@ -79,10 +79,10 @@ function sumOfNumbers(input) {
     let numOne = +input[0];
     let numTwo = +input[1];
     let sum = 0;
+
     for (let i = numOne; i <= numTwo; i++) {
         if (i % 9 === 0) {
             sum += i;
-
         }
     }
     console.log(`The sum: ${sum}`);
